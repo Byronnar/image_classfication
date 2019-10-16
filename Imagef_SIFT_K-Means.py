@@ -18,7 +18,7 @@ def get_file_name(path): #获得文件名
             filename_list.append(file) #使用append 增加文件
     return path_filenames #返回：带文件名的路径
 
-def kmens_detect(file_list, cluster_nums, randomState=None): # KNN 线性分类器
+def kmeans_detect(file_list, cluster_nums, randomState=None): # KNN 线性分类器
     features = []
     files = file_list #特征检测
     sift = cv2.xfeatures2d.SIFT_create() #调用SIFT特征提取方法
@@ -62,7 +62,7 @@ def save(path, filename, data):
             fw.write("{}\t{}\r\n".format(f,l)) # 控制换行
 def main():
     path_filenames = sorted(get_file_name("picture")) # 从picture 文件夹里面获取图片名字
-    labels, cluster_centers = kmens_detect(path_filenames, 2) # 识别两类
+    labels, cluster_centers = kmeans_detect(path_filenames, 2) # 识别两类
     imgs = os.listdir('./picture')
     imgnum = len(imgs)  # 文件夹中图片的数量
     print ('文件夹里面图片数量:',imgnum)
