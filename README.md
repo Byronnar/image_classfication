@@ -16,9 +16,13 @@
 ##  跑一下demo
 ###  环境要求:
 windows/linux
-python3.7  
+
+python3
+
 opencv-python==3.4.2.17
+
 opencv-contrib-python==3.4.2.17
+
 sklearn
 
 1) 运行 Imagef_SIFT_K-Means.py文件
